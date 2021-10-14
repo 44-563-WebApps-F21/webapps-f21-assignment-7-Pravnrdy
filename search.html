@@ -14,6 +14,19 @@
 
         <script>
 
+function resetTriesAndLocation() {
+            triesCount = 0;
+            animalLocation = Math.round(Math.random() * (23));
+            document.getElementById("tries").innerHTML = "Number of tries is zero";
+            distanceOfAnimal = "unknown"
+            document.getElementById("distance").innerHTML = "Distance is " + distanceOfAnimal;
+            for (var i = 0; i < 24; i++) {
+
+                document.getElementById(ids[i]).src = "tree.jpg";
+            }
+
+        }
+
 let ids = [];
         let triesCount = 0;
         let animalLocation = 13;

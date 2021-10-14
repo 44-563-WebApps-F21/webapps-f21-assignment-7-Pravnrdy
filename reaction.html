@@ -32,12 +32,12 @@
         function startTime() {
             myTime = undefined;
             buttonTime = Date.now();
-            
+            let randomVal = Math.round(Math.random() * (10 - 2) + 2);
 
-            for(let i=0;i<=3;i++){
+            for(let i=0;i<randomVal;i++){
               setTimeout(() => {
                   document.getElementById("countdown").innerHTML = i;
-                }, (3-i)*1000);
+                }, (randomVal-i)*1000);
             }
 
               setTimeout(() => {
@@ -49,7 +49,7 @@
                   let elapsedTime = (-1) * (buttonTime - myTime);
                   document.getElementById("target").innerHTML = "Time was "+elapsedTime+" ms";
                 }
-              }, 3000)
+              }, (randomVal-1)*1000)
             }
   </script>
 
